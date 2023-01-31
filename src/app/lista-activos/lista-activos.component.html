@@ -1,0 +1,47 @@
+<h2>Lista activos</h2>
+<table class="table table-striped">
+  <thead class="table-dark">
+    <tr>
+      <th> id  </th>
+      <th> nombre  </th>
+      <th> descripción  </th>
+      <th> tipo  </th>
+      <th> serial </th>
+      <th> numero </th>
+      <th> interno_de_inventario </th>
+      <th> peso </th>
+      <th> alto</th>
+      <th> ancho  </th>
+      <th> largo </th>
+      <th> valor_compra </th>
+      <th> dateCompra </th>
+      <th> Area </th>
+      <th> Accion </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor= "let activo of activos">
+      <td>{{activo.id}}</td>
+      <td>{{activo.nombre}}</td>
+      <td>{{activo.descripcion}}</td>
+      <td>{{activo.tipo}}</td>
+      <td>{{activo.Serial}}</td>
+      <td>{{activo.numero}}</td>
+      <td>{{activo.interno_de_inventario}}</td>
+      <td>{{activo.peso}}</td>
+      <td>{{activo.alto}}</td>
+      <td>{{activo.ancho}}</td>
+      <td>{{activo.largo}}</td>
+      <td>{{activo.valor_compra}}</td>
+      <td>{{activo.dateCompra}}</td>
+      <td>{{activo.area}}</td>
+      <td>
+
+        <button (click)= "actualizarEmpleado(activo.id)" class="btn btn-info">Editar</button>
+        <button (click)= "verDetallesDelActivo(activo.id)" class="btn btn-info">Detalles</button>
+
+      </td>
+    
+    </tr>
+  </tbody>
+</table>
